@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+void printstair(int n)
+{
+	//base case
+	if(n==1)
+	{
+		cout<<"*"<<endl;
+		return;
+	}
+
+	//recursive case
+	printstair(n-1);
+	for(int i=1;i<=n;i++)
+	{
+		cout<<"*	";
+	}
+	cout<<endl;
+
+}
+int main() {
+	
+	int n;
+	cin>>n;
+
+	printstair(n);
+
+	return 0;
+}
