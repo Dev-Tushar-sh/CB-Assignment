@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+string move(string str)
+{
+	//base case
+	if(str.length()==0)
+	{
+		return str;
+	}
+
+	//recursive case
+	if(str[0]!='x')
+	{
+		string ans = str[0] + move(str.substr(1));
+		return ans;
+	}
+	else
+	{
+		string ans = move(str.substr(1))+str[0];
+		return ans;
+	}
+}
+
+int main() {
+	string str;
+	cin>>str;
+
+	cout<<move(str);
+
+	return 0;
+}
